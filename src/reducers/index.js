@@ -1,5 +1,6 @@
 import { combineReducers } from "redux";
 import { SIGN_IN, SIGN_OUT } from '../actions/types';
+import {reducer as formReducer} from 'redux-form';
 
 const INITIAL_STATE = {
   isSignedIn: null,
@@ -18,5 +19,6 @@ const auth = (state = INITIAL_STATE, action) => {
 };
 
 export default combineReducers({
-  auth
+  auth,
+  form: formReducer
 });
